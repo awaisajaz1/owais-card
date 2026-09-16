@@ -42,15 +42,16 @@
 
   .logo-wrap {
     margin-bottom: 20px;
-    height: 32px;
+    height: 48px;
     display: flex;
     align-items: center;
   }
 
   /* Real logo image — hidden until loaded */
   .logo-img {
-    height: 32px;
+    height: 48px;
     width: auto;
+    max-width: 180px;
     display: block;
     object-fit: contain;
   }
@@ -275,13 +276,14 @@
     <div class="profile-row">
       <div class="avatar-wrap">
         <!-- Photo: upload owais.jpg to GitHub to show your photo -->
+        <div class="avatar-initials" id="initials">OA</div>
         <img
           class="avatar"
-          src="owais.jpg"
+          src="owais.png"
           alt="Muhammad Owais Ajaz"
-          onerror="this.style.display='none'; document.getElementById('initials').style.display='flex';"
+          style="display:none;"
+          onload="this.style.display='block'; document.getElementById('initials').style.display='none';"
         >
-        <div class="avatar-initials" id="initials" style="display:none;">OA</div>
       </div>
       <div class="banner-name">
         <h1>Muhammad Owais Ajaz</h1>
