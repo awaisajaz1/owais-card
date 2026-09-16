@@ -12,7 +12,7 @@
 
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #f0f2f5;
+    background: #eef1f5;
     color: #17202a;
     min-height: 100vh;
     display: flex;
@@ -26,43 +26,42 @@
     max-width: 420px;
     background: #fff;
     border-radius: 24px;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.10);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.12);
     overflow: hidden;
   }
 
   /* ── Header banner ── */
   .banner {
     background: #0f1c2e;
-    padding: 28px 28px 0;
+    padding: 24px 28px 0;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
 
+  /* Logo — full width, prominent */
   .logo-wrap {
-    margin-bottom: 20px;
-    height: 48px;
+    width: 100%;
+    margin-bottom: 22px;
     display: flex;
     align-items: center;
   }
 
-  /* Real logo image — hidden until loaded */
   .logo-img {
-    height: 48px;
+    height: 44px;
     width: auto;
-    max-width: 180px;
-    display: block;
+    max-width: 220px;
     object-fit: contain;
+    display: block;
   }
 
-  /* Fallback text logo shown if image fails */
   .logo-text {
     display: none;
-    font-size: 17px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 800;
     color: #fff;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.05em;
   }
 
   .logo-img.error { display: none; }
@@ -77,25 +76,13 @@
   }
 
   .avatar-wrap {
-    position: relative;
     flex-shrink: 0;
-    margin-bottom: -28px;
+    margin-bottom: -30px;
   }
 
-  .avatar {
-    width: 88px;
-    height: 88px;
-    border-radius: 50%;
-    border: 3px solid #fff;
-    object-fit: cover;
-    display: block;
-    background: #1e3a5f;
-  }
-
-  /* Initials fallback shown when no photo */
   .avatar-initials {
-    width: 88px;
-    height: 88px;
+    width: 92px;
+    height: 92px;
     border-radius: 50%;
     border: 3px solid #fff;
     background: linear-gradient(135deg, #1e3a5f, #2d5a9e);
@@ -105,12 +92,22 @@
     font-size: 28px;
     font-weight: 700;
     color: #93c5fd;
-    letter-spacing: 0.02em;
-    flex-shrink: 0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  }
+
+  .avatar-photo {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+    display: none;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
   }
 
   .banner-name {
-    padding-bottom: 34px;
+    padding-bottom: 36px;
+    flex: 1;
   }
 
   .banner-name h1 {
@@ -118,36 +115,34 @@
     font-weight: 700;
     color: #fff;
     line-height: 1.2;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
   }
 
   .banner-name .title {
     font-size: 12px;
     font-weight: 400;
     color: #93c5fd;
-    line-height: 1.4;
+    line-height: 1.5;
   }
 
   /* ── Body ── */
   .body {
-    padding: 40px 24px 24px;
+    padding: 42px 24px 26px;
   }
 
   .company-row {
     display: flex;
     align-items: center;
     gap: 6px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
-
-  .company-row svg { flex-shrink: 0; }
 
   .company-label {
     font-size: 13px;
     color: #667085;
   }
 
-  /* Save contact box */
+  /* Save contact */
   .save-box {
     display: flex;
     align-items: center;
@@ -156,7 +151,7 @@
     background: #f8fafc;
     border: 1px solid #e2e8f0;
     border-radius: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     text-decoration: none;
     color: #17202a;
     transition: background 0.2s;
@@ -171,8 +166,8 @@
   }
 
   .save-icon {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
     border-radius: 10px;
     background: #0f1c2e;
     display: flex;
@@ -181,23 +176,15 @@
     flex-shrink: 0;
   }
 
-  .save-text strong {
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-  }
+  .save-text strong { display: block; font-size: 14px; font-weight: 600; }
+  .save-text span { font-size: 12px; color: #667085; }
 
-  .save-text span {
-    font-size: 12px;
-    color: #667085;
-  }
-
-  /* Action buttons grid */
+  /* Buttons */
   .actions {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .btn {
@@ -215,11 +202,7 @@
     transition: background 0.15s, border-color 0.15s;
   }
 
-  .btn:hover {
-    background: #eef2f7;
-    border-color: #c8d3e0;
-  }
-
+  .btn:hover { background: #eef2f7; border-color: #c8d3e0; }
   .btn.full { grid-column: 1 / -1; }
 
   .btn-icon {
@@ -241,18 +224,9 @@
   .ic-gh    { background: #f1f5f9; }
   .ic-li2   { background: #dbeafe; }
 
-  .divider {
-    height: 1px;
-    background: #e2e8f0;
-    margin: 4px 0 16px;
-  }
+  .divider { height: 1px; background: #e2e8f0; margin: 4px 0 14px; }
 
-  .footer {
-    text-align: center;
-    font-size: 11px;
-    color: #adb5bd;
-  }
-
+  .footer { text-align: center; font-size: 11px; color: #adb5bd; }
   .footer a { color: #667085; text-decoration: none; }
 </style>
 </head>
@@ -262,7 +236,6 @@
 
   <!-- Banner -->
   <div class="banner">
-    <!-- Logo: upload qorelogix-logo.png to GitHub to show it -->
     <div class="logo-wrap">
       <img
         class="logo-img"
@@ -270,19 +243,18 @@
         alt="Qorelogix"
         onerror="this.classList.add('error')"
       >
-      <span class="logo-text">Qorelogix</span>
+      <span class="logo-text">QORELOGIX</span>
     </div>
 
     <div class="profile-row">
       <div class="avatar-wrap">
-        <!-- Photo: upload owais.jpg to GitHub to show your photo -->
         <div class="avatar-initials" id="initials">OA</div>
         <img
-          class="avatar"
+          class="avatar-photo"
           src="owais.png"
           alt="Muhammad Owais Ajaz"
-          style="display:none;"
           onload="this.style.display='block'; document.getElementById('initials').style.display='none';"
+          onerror="this.style.display='none';"
         >
       </div>
       <div class="banner-name">
@@ -303,7 +275,6 @@
       <span class="company-label">Qorelogix &nbsp;·&nbsp; Pakistan</span>
     </div>
 
-    <!-- Save contact -->
     <a class="save-box" href="Muhammad_Owais_Ajaz.vcf" download>
       <div class="save-left">
         <div class="save-icon">
@@ -323,7 +294,6 @@
       </svg>
     </a>
 
-    <!-- Action buttons -->
     <div class="actions">
 
       <a class="btn" href="tel:+9230015388882">
